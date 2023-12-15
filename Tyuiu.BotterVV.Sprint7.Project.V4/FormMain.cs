@@ -42,11 +42,6 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
             }
         }
 
-        private void оПрограммеToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Выполнил: студент группы ПКТб-23-2, Боттер Вадим Валерьевич", "Сведения о программе", MessageBoxButtons.OK, MessageBoxIcon.Information);

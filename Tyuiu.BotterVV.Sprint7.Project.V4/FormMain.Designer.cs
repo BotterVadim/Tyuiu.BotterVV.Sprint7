@@ -1,5 +1,5 @@
 ﻿
-namespace Project.V4.App
+namespace Tyuiu.BotterVV.Sprint7.Project.V4
 {
     partial class FormMain
     {
@@ -36,10 +36,10 @@ namespace Project.V4.App
             this.функционалToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поискToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьБазуДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelFind_BVV = new System.Windows.Forms.Panel();
+            this.panelDataBase_BVV = new System.Windows.Forms.Panel();
             this.dataGridViewDataBase_BVV = new System.Windows.Forms.DataGridView();
             this.menuStrip_BVV.SuspendLayout();
-            this.panelFind_BVV.SuspendLayout();
+            this.panelDataBase_BVV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDataBase_BVV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,15 +58,16 @@ namespace Project.V4.App
             // 
             this.параметрыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.оПрограммеToolStripMenuItem});
-            this.параметрыToolStripMenuItem.Image = global::Project.V4.App.Properties.Resources.cog;
+            this.параметрыToolStripMenuItem.Image = global::Tyuiu.BotterVV.Sprint7.Project.V4.Properties.Resources.cog;
             this.параметрыToolStripMenuItem.Name = "параметрыToolStripMenuItem";
             this.параметрыToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
             this.параметрыToolStripMenuItem.Text = "Параметры";
             // 
             // оПрограммеToolStripMenuItem
             // 
+            this.оПрограммеToolStripMenuItem.Image = global::Tyuiu.BotterVV.Sprint7.Project.V4.Properties.Resources.information;
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
@@ -75,41 +76,40 @@ namespace Project.V4.App
             this.функционалToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.поискToolStripMenuItem,
             this.открытьБазуДанныхToolStripMenuItem});
-            this.функционалToolStripMenuItem.Image = global::Project.V4.App.Properties.Resources.book;
+            this.функционалToolStripMenuItem.Image = global::Tyuiu.BotterVV.Sprint7.Project.V4.Properties.Resources.book;
             this.функционалToolStripMenuItem.Name = "функционалToolStripMenuItem";
             this.функционалToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
             this.функционалToolStripMenuItem.Text = "Функционал";
             // 
             // поискToolStripMenuItem
             // 
-            this.поискToolStripMenuItem.Image = global::Project.V4.App.Properties.Resources.magnifier;
+            this.поискToolStripMenuItem.Image = global::Tyuiu.BotterVV.Sprint7.Project.V4.Properties.Resources.magnifier;
             this.поискToolStripMenuItem.Name = "поискToolStripMenuItem";
             this.поискToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.поискToolStripMenuItem.Text = "Поиск...";
-            this.поискToolStripMenuItem.Click += new System.EventHandler(this.поискToolStripMenuItem_Click);
             // 
             // открытьБазуДанныхToolStripMenuItem
             // 
+            this.открытьБазуДанныхToolStripMenuItem.Image = global::Tyuiu.BotterVV.Sprint7.Project.V4.Properties.Resources.book_open;
             this.открытьБазуДанныхToolStripMenuItem.Name = "открытьБазуДанныхToolStripMenuItem";
             this.открытьБазуДанныхToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.открытьБазуДанныхToolStripMenuItem.Text = "Открыть базу данных...";
             this.открытьБазуДанныхToolStripMenuItem.Click += new System.EventHandler(this.открытьБазуДанныхToolStripMenuItem_Click);
             // 
-            // panelFind_BVV
+            // panelDataBase_BVV
             // 
-            this.panelFind_BVV.Controls.Add(this.dataGridViewDataBase_BVV);
-            this.panelFind_BVV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFind_BVV.Enabled = false;
-            this.panelFind_BVV.Location = new System.Drawing.Point(0, 24);
-            this.panelFind_BVV.Name = "panelFind_BVV";
-            this.panelFind_BVV.Size = new System.Drawing.Size(800, 426);
-            this.panelFind_BVV.TabIndex = 1;
-            this.panelFind_BVV.Visible = false;
+            this.panelDataBase_BVV.Controls.Add(this.dataGridViewDataBase_BVV);
+            this.panelDataBase_BVV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDataBase_BVV.Enabled = false;
+            this.panelDataBase_BVV.Location = new System.Drawing.Point(0, 24);
+            this.panelDataBase_BVV.Name = "panelDataBase_BVV";
+            this.panelDataBase_BVV.Size = new System.Drawing.Size(800, 426);
+            this.panelDataBase_BVV.TabIndex = 1;
+            this.panelDataBase_BVV.Visible = false;
             // 
             // dataGridViewDataBase_BVV
             // 
             this.dataGridViewDataBase_BVV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewDataBase_BVV.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridViewDataBase_BVV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDataBase_BVV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewDataBase_BVV.Location = new System.Drawing.Point(0, 0);
@@ -123,7 +123,7 @@ namespace Project.V4.App
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panelFind_BVV);
+            this.Controls.Add(this.panelDataBase_BVV);
             this.Controls.Add(this.menuStrip_BVV);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip_BVV;
@@ -132,7 +132,7 @@ namespace Project.V4.App
             this.Text = "Библиотека";
             this.menuStrip_BVV.ResumeLayout(false);
             this.menuStrip_BVV.PerformLayout();
-            this.panelFind_BVV.ResumeLayout(false);
+            this.panelDataBase_BVV.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDataBase_BVV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -147,7 +147,7 @@ namespace Project.V4.App
         private System.Windows.Forms.ToolStripMenuItem функционалToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem поискToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem открытьБазуДанныхToolStripMenuItem;
-        private System.Windows.Forms.Panel panelFind_BVV;
+        private System.Windows.Forms.Panel panelDataBase_BVV;
         private System.Windows.Forms.DataGridView dataGridViewDataBase_BVV;
     }
 }

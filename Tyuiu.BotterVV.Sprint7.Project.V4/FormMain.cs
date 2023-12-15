@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using Project.V4.Lib;
+using Tyuiu.BotterVV.Sprint7.Project.V4.Lib;
 
-namespace Project.V4.App
+namespace Tyuiu.BotterVV.Sprint7.Project.V4
 {
     public partial class FormMain : Form
     {
@@ -20,11 +20,7 @@ namespace Project.V4.App
         }
 
         public string databaseopenpath;
-        DataService ds = new DataService(); 
-        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Выполнил: студент группы ПКТб-23-2, Боттер Вадим Валерьевич", "Сведения о программе", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+        DataService ds = new DataService();
 
         private void поискToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -39,11 +35,21 @@ namespace Project.V4.App
 
             if (resultdatabase == DialogResult.OK)
             {
-                panelFind_BVV.Visible = true;
-                panelFind_BVV.Enabled = true;
+                panelDataBase_BVV.Visible = true;
+                panelDataBase_BVV.Enabled = true;
 
                 dataGridViewDataBase_BVV.DataSource = ds.dataBase(databaseopenpath);
             }
+        }
+
+        private void оПрограммеToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Выполнил: студент группы ПКТб-23-2, Боттер Вадим Валерьевич", "Сведения о программе", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

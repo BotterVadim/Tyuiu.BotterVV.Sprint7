@@ -36,8 +36,12 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
             this.функционалToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поискToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьБазуДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panelDataBase_BVV = new System.Windows.Forms.Panel();
             this.dataGridViewDataBase_BVV = new System.Windows.Forms.DataGridView();
+            this.labelSearch_BVV = new System.Windows.Forms.Label();
+            this.textBoxSearch_BVV = new System.Windows.Forms.TextBox();
+            this.buttonSearch_BVV = new System.Windows.Forms.Button();
             this.menuStrip_BVV.SuspendLayout();
             this.panelDataBase_BVV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDataBase_BVV)).BeginInit();
@@ -47,7 +51,8 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
             // 
             this.menuStrip_BVV.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.параметрыToolStripMenuItem,
-            this.функционалToolStripMenuItem});
+            this.функционалToolStripMenuItem,
+            this.toolStripMenuItem1});
             this.menuStrip_BVV.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_BVV.Name = "menuStrip_BVV";
             this.menuStrip_BVV.Size = new System.Drawing.Size(800, 24);
@@ -67,7 +72,7 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
             // 
             this.оПрограммеToolStripMenuItem.Image = global::Tyuiu.BotterVV.Sprint7.Project.V4.Properties.Resources.information;
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
@@ -96,6 +101,11 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
             this.открытьБазуДанныхToolStripMenuItem.Text = "Открыть базу данных...";
             this.открытьБазуДанныхToolStripMenuItem.Click += new System.EventHandler(this.открытьБазуДанныхToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
+            // 
             // panelDataBase_BVV
             // 
             this.panelDataBase_BVV.Controls.Add(this.dataGridViewDataBase_BVV);
@@ -115,14 +125,46 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
             this.dataGridViewDataBase_BVV.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewDataBase_BVV.Name = "dataGridViewDataBase_BVV";
             this.dataGridViewDataBase_BVV.ReadOnly = true;
+            this.dataGridViewDataBase_BVV.RowHeadersVisible = false;
             this.dataGridViewDataBase_BVV.Size = new System.Drawing.Size(800, 426);
             this.dataGridViewDataBase_BVV.TabIndex = 0;
+            // 
+            // labelSearch_BVV
+            // 
+            this.labelSearch_BVV.AutoSize = true;
+            this.labelSearch_BVV.BackColor = System.Drawing.SystemColors.Control;
+            this.labelSearch_BVV.Location = new System.Drawing.Point(214, 6);
+            this.labelSearch_BVV.Name = "labelSearch_BVV";
+            this.labelSearch_BVV.Size = new System.Drawing.Size(42, 13);
+            this.labelSearch_BVV.TabIndex = 3;
+            this.labelSearch_BVV.Text = "Поиск:";
+            // 
+            // textBoxSearch_BVV
+            // 
+            this.textBoxSearch_BVV.Location = new System.Drawing.Point(262, 3);
+            this.textBoxSearch_BVV.Name = "textBoxSearch_BVV";
+            this.textBoxSearch_BVV.Size = new System.Drawing.Size(206, 20);
+            this.textBoxSearch_BVV.TabIndex = 2;
+            // 
+            // buttonSearch_BVV
+            // 
+            this.buttonSearch_BVV.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSearch_BVV.Location = new System.Drawing.Point(474, 3);
+            this.buttonSearch_BVV.Name = "buttonSearch_BVV";
+            this.buttonSearch_BVV.Size = new System.Drawing.Size(75, 18);
+            this.buttonSearch_BVV.TabIndex = 4;
+            this.buttonSearch_BVV.Text = "Искать";
+            this.buttonSearch_BVV.UseVisualStyleBackColor = true;
+            this.buttonSearch_BVV.Click += new System.EventHandler(this.buttonSearch_BVV_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonSearch_BVV);
+            this.Controls.Add(this.labelSearch_BVV);
+            this.Controls.Add(this.textBoxSearch_BVV);
             this.Controls.Add(this.panelDataBase_BVV);
             this.Controls.Add(this.menuStrip_BVV);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -149,6 +191,10 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
         private System.Windows.Forms.ToolStripMenuItem открытьБазуДанныхToolStripMenuItem;
         private System.Windows.Forms.Panel panelDataBase_BVV;
         private System.Windows.Forms.DataGridView dataGridViewDataBase_BVV;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.Label labelSearch_BVV;
+        private System.Windows.Forms.TextBox textBoxSearch_BVV;
+        private System.Windows.Forms.Button buttonSearch_BVV;
     }
 }
 

@@ -22,10 +22,6 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
         public string databaseopenpath;
         DataService ds = new DataService();
 
-        private void поискToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
         private void открытьБазуДанныхToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog databaseopen = new OpenFileDialog();
@@ -45,6 +41,25 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Выполнил: студент группы ПКТб-23-2, Боттер Вадим Валерьевич", "Сведения о программе", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void buttonSearch_BVV_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridViewDataBase_BVV.RowCount; i++)
+            {
+                dataGridViewDataBase_BVV.Rows[i].Selected = false;
+                for (int j = 0; j < dataGridViewDataBase_BVV.ColumnCount; j++)
+                {
+                    if (dataGridViewDataBase_BVV.Rows[i].Cells[j].Value != null)
+                    {
+                        if (dataGridViewDataBase_BVV.Rows[i].Cells[j].Value.ToString().Contains(textBoxSearch_BVV.Text))
+                        {
+                            dataGridViewDataBase_BVV.Rows[i].Cells[j].Selected = true;
+                            break;
+                        }
+                    }
+                }
+            }
         }
     }
 }

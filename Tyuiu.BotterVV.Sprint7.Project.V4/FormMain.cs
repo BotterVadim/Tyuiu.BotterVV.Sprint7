@@ -18,23 +18,23 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
         {
             InitializeComponent();
         }
-
         public string databaseopenpath;
+        public string databasebooksopenpath;
         DataService ds = new DataService();
 
         private void открытьБазуДанныхToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog databaseopen = new OpenFileDialog();
-            databaseopen.Filter = "Значения, разделённые запятыми(*.csv)| *.csv|Все файлы(*.*)|*.*";
-            DialogResult resultdatabase = databaseopen.ShowDialog();
-            databaseopenpath = databaseopen.FileName;
+            OpenFileDialog databaseopenbooks = new OpenFileDialog();
+            databaseopenbooks.Filter = "Значения, разделённые запятыми(*.csv)| *.csv|Все файлы(*.*)|*.*";
+            DialogResult resultdatabasebooks = databaseopenbooks.ShowDialog();
+            databasebooksopenpath = databaseopenbooks.FileName;
 
-            if (resultdatabase == DialogResult.OK)
+            if (resultdatabasebooks == DialogResult.OK)
             {
-                panelDataBase_BVV.Visible = true;
+                dataGridViewDataBase_BVV.DataSource = ds.dataBasebooks(databasebooksopenpath);
                 panelDataBase_BVV.Enabled = true;
+                panelDataBase_BVV.Visible = true;
 
-                dataGridViewDataBase_BVV.DataSource = ds.dataBase(databaseopenpath);
             }
         }
 
@@ -59,6 +59,21 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
                         }
                     }
                 }
+            }
+        }
+
+        private void открытьБазуДанныхЧитателейToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog databaseopen = new OpenFileDialog();
+            databaseopen.Filter = "Значения, разделённые запятыми(*.csv)| *.csv|Все файлы(*.*)|*.*";
+            DialogResult resultdatabase = databaseopen.ShowDialog();
+            databaseopenpath = databaseopen.FileName;
+
+            if (resultdatabase == DialogResult.OK)
+            {
+                dataGridViewDataBase_BVV.DataSource = ds.dataBase(databaseopenpath);
+                panelDataBase_BVV.Enabled = true;
+                panelDataBase_BVV.Visible = true;
             }
         }
     }

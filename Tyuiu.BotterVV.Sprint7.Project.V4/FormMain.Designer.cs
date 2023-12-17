@@ -34,7 +34,6 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
             this.параметрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.функционалToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поискToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьБазуДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьБазуДанныхЧитателейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelDataBase_BVV = new System.Windows.Forms.Panel();
@@ -71,27 +70,19 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
             // 
             this.оПрограммеToolStripMenuItem.Image = global::Tyuiu.BotterVV.Sprint7.Project.V4.Properties.Resources.information;
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // функционалToolStripMenuItem
             // 
             this.функционалToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.поискToolStripMenuItem,
             this.открытьБазуДанныхToolStripMenuItem,
             this.открытьБазуДанныхЧитателейToolStripMenuItem});
             this.функционалToolStripMenuItem.Image = global::Tyuiu.BotterVV.Sprint7.Project.V4.Properties.Resources.book;
             this.функционалToolStripMenuItem.Name = "функционалToolStripMenuItem";
             this.функционалToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
             this.функционалToolStripMenuItem.Text = "Функционал";
-            // 
-            // поискToolStripMenuItem
-            // 
-            this.поискToolStripMenuItem.Image = global::Tyuiu.BotterVV.Sprint7.Project.V4.Properties.Resources.magnifier;
-            this.поискToolStripMenuItem.Name = "поискToolStripMenuItem";
-            this.поискToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
-            this.поискToolStripMenuItem.Text = "Поиск...";
             // 
             // открытьБазуДанныхToolStripMenuItem
             // 
@@ -190,7 +181,6 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
         private System.Windows.Forms.ToolStripMenuItem параметрыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem функционалToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem поискToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem открытьБазуДанныхToolStripMenuItem;
         private System.Windows.Forms.Panel panelDataBase_BVV;
         private System.Windows.Forms.DataGridView dataGridViewDataBase_BVV;

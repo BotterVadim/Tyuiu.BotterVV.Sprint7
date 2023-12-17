@@ -46,7 +46,6 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4.Lib
             }
             return bookdatabase;
         }
-
         public DataTable dataBase(string path)
         {
             DataTable database = new DataTable("Читательские билеты");

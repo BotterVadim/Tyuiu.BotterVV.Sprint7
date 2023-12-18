@@ -29,19 +29,29 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4.Lib
 
             bookdatabase.Columns.AddRange(new DataColumn[] { author, bookname, yearbook, bookprice, newedition, shortannotation });
 
-            using (StreamReader reader = new StreamReader(pathbooks, Encoding.Default))
+            try
             {
-                string[] headers = reader.ReadLine().Split(';');
-                while (reader.ReadLine() != null)
+                DataRow row = null;
+                string[] bookValues = null;
+                string[] book = File.ReadAllLines(pathbooks, Encoding.Default);
+                for (int i = 0; i < book.Length; i++)
                 {
-                    string[] rows = reader.ReadLine().Split(';');
-                    DataRow row = bookdatabase.NewRow();
-                    for (int i = 0; i < headers.Length; i++)
+                    if (!String.IsNullOrEmpty(book[i]))
                     {
-                        row[i] = rows[i];
+                        bookValues = book[i].Split(';');
+                        row = bookdatabase.NewRow();
+                        row["Автор"] = bookValues[0];
+                        row["Название"] = bookValues[1];
+                        row["Год издания"] = int.Parse(bookValues[2]);
+                        row["Цена"] = int.Parse(bookValues[3]);
+                        row["Новое издание"] = bookValues[4];
+                        row["Краткая аннотация"] = bookValues[5];
+                        bookdatabase.Rows.Add(row);
                     }
-                    bookdatabase.Rows.Add(row);
                 }
+            }
+            catch
+            {
 
             }
             return bookdatabase;
@@ -66,22 +76,32 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4.Lib
 
             database.Columns.AddRange(new DataColumn[] { numberbileta, fiochitatel, address, phonenumber, datevidachabook, datesdachabook });
 
-            using (StreamReader reader = new StreamReader(path, Encoding.Default))
+            try
             {
-                string[] headers = reader.ReadLine().Split(';');
-                string[] rows = reader.ReadLine().Split(';');
-
-                while (reader.ReadLine() != null)
+                DataRow row = null;
+                string[] chitValues = null;
+                string[] chit = File.ReadAllLines(path, Encoding.Default);
+                for (int i = 0; i < chit.Length; i++)
                 {
-                    DataRow row = database.NewRow();
-                    for (int i = 0; i < headers.Length; i++)
+                    if (!String.IsNullOrEmpty(chit[i]))
                     {
-                        row[i] = rows[i];
+                        chitValues = chit[i].Split(';');
+                        row = database.NewRow();
+                        row["Номер читательского билета"] = int.Parse(chitValues[0]);
+                        row["ФИО"] = chitValues[1];
+                        row["Адрес читателя"] = chitValues[2];
+                        row["Телефон читателя"] = int.Parse(chitValues[3]);
+                        row["Дата выдачи книги читателю"] = Double.Parse(chitValues[4]);
+                        row["Дата сдачи книги читателем"] = Double.Parse(chitValues[5]);
+                        database.Rows.Add(row);
                     }
-                    database.Rows.Add(row);
                 }
-                return database;
             }
+            catch
+            {
+
+            }
+            return database;
         }
     }
 }

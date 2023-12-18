@@ -76,5 +76,12 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
                 panelDataBase_BVV.Visible = true;
             }
         }
+
+        private void статистикаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormStatistics formStatistics = new FormStatistics();
+            formStatistics.Enabled = true;
+            formStatistics.ShowDialog();
+        }
     }
 }

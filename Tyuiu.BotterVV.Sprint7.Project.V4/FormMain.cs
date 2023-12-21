@@ -17,6 +17,8 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
         public FormMain()
         {
             InitializeComponent();
+            dataGridViewDataBase_BVV.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dataGridViewDataBase_BVV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
         public string databaseopenpath;
         public string databasebooksopenpath;
@@ -83,6 +85,11 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
             FormStatistics formStatistics = new FormStatistics();
             formStatistics.Enabled = true;
             formStatistics.ShowDialog();
+        }
+
+        private void buttonSearch_BVV_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipButtons_BVV.ToolTipTitle = "Поиск по файлу";
         }
     }
 }

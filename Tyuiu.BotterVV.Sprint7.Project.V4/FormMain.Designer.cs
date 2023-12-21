@@ -29,19 +29,21 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.menuStrip_BVV = new System.Windows.Forms.MenuStrip();
-            this.panelDataBase_BVV = new System.Windows.Forms.Panel();
-            this.dataGridViewDataBase_BVV = new System.Windows.Forms.DataGridView();
-            this.labelSearch_BVV = new System.Windows.Forms.Label();
-            this.textBoxSearch_BVV = new System.Windows.Forms.TextBox();
-            this.buttonSearch_BVV = new System.Windows.Forms.Button();
             this.параметрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.функционалToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьБазуДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьБазуДанныхЧитателейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.статистикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelDataBase_BVV = new System.Windows.Forms.Panel();
+            this.dataGridViewDataBase_BVV = new System.Windows.Forms.DataGridView();
+            this.labelSearch_BVV = new System.Windows.Forms.Label();
+            this.textBoxSearch_BVV = new System.Windows.Forms.TextBox();
+            this.buttonSearch_BVV = new System.Windows.Forms.Button();
+            this.toolTipButtons_BVV = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip_BVV.SuspendLayout();
             this.panelDataBase_BVV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDataBase_BVV)).BeginInit();
@@ -57,57 +59,6 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
             this.menuStrip_BVV.Size = new System.Drawing.Size(984, 24);
             this.menuStrip_BVV.TabIndex = 0;
             this.menuStrip_BVV.Text = "menuStrip1";
-            // 
-            // panelDataBase_BVV
-            // 
-            this.panelDataBase_BVV.Controls.Add(this.dataGridViewDataBase_BVV);
-            this.panelDataBase_BVV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDataBase_BVV.Enabled = false;
-            this.panelDataBase_BVV.Location = new System.Drawing.Point(0, 24);
-            this.panelDataBase_BVV.Name = "panelDataBase_BVV";
-            this.panelDataBase_BVV.Size = new System.Drawing.Size(984, 537);
-            this.panelDataBase_BVV.TabIndex = 1;
-            this.panelDataBase_BVV.Visible = false;
-            // 
-            // dataGridViewDataBase_BVV
-            // 
-            this.dataGridViewDataBase_BVV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewDataBase_BVV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDataBase_BVV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewDataBase_BVV.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewDataBase_BVV.Name = "dataGridViewDataBase_BVV";
-            this.dataGridViewDataBase_BVV.ReadOnly = true;
-            this.dataGridViewDataBase_BVV.RowHeadersVisible = false;
-            this.dataGridViewDataBase_BVV.Size = new System.Drawing.Size(984, 537);
-            this.dataGridViewDataBase_BVV.TabIndex = 0;
-            // 
-            // labelSearch_BVV
-            // 
-            this.labelSearch_BVV.AutoSize = true;
-            this.labelSearch_BVV.BackColor = System.Drawing.SystemColors.Control;
-            this.labelSearch_BVV.Location = new System.Drawing.Point(214, 6);
-            this.labelSearch_BVV.Name = "labelSearch_BVV";
-            this.labelSearch_BVV.Size = new System.Drawing.Size(42, 13);
-            this.labelSearch_BVV.TabIndex = 3;
-            this.labelSearch_BVV.Text = "Поиск:";
-            // 
-            // textBoxSearch_BVV
-            // 
-            this.textBoxSearch_BVV.Location = new System.Drawing.Point(262, 3);
-            this.textBoxSearch_BVV.Name = "textBoxSearch_BVV";
-            this.textBoxSearch_BVV.Size = new System.Drawing.Size(206, 20);
-            this.textBoxSearch_BVV.TabIndex = 2;
-            // 
-            // buttonSearch_BVV
-            // 
-            this.buttonSearch_BVV.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSearch_BVV.Location = new System.Drawing.Point(474, 3);
-            this.buttonSearch_BVV.Name = "buttonSearch_BVV";
-            this.buttonSearch_BVV.Size = new System.Drawing.Size(75, 18);
-            this.buttonSearch_BVV.TabIndex = 4;
-            this.buttonSearch_BVV.Text = "Искать";
-            this.buttonSearch_BVV.UseVisualStyleBackColor = true;
-            this.buttonSearch_BVV.Click += new System.EventHandler(this.buttonSearch_BVV_Click);
             // 
             // параметрыToolStripMenuItem
             // 
@@ -161,6 +112,63 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
             this.статистикаToolStripMenuItem.Text = "Статистика";
             this.статистикаToolStripMenuItem.Click += new System.EventHandler(this.статистикаToolStripMenuItem_Click);
             // 
+            // panelDataBase_BVV
+            // 
+            this.panelDataBase_BVV.Controls.Add(this.dataGridViewDataBase_BVV);
+            this.panelDataBase_BVV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDataBase_BVV.Enabled = false;
+            this.panelDataBase_BVV.Location = new System.Drawing.Point(0, 24);
+            this.panelDataBase_BVV.Name = "panelDataBase_BVV";
+            this.panelDataBase_BVV.Size = new System.Drawing.Size(984, 537);
+            this.panelDataBase_BVV.TabIndex = 1;
+            this.panelDataBase_BVV.Visible = false;
+            // 
+            // dataGridViewDataBase_BVV
+            // 
+            this.dataGridViewDataBase_BVV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewDataBase_BVV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDataBase_BVV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewDataBase_BVV.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewDataBase_BVV.Name = "dataGridViewDataBase_BVV";
+            this.dataGridViewDataBase_BVV.ReadOnly = true;
+            this.dataGridViewDataBase_BVV.RowHeadersVisible = false;
+            this.dataGridViewDataBase_BVV.Size = new System.Drawing.Size(984, 537);
+            this.dataGridViewDataBase_BVV.TabIndex = 0;
+            // 
+            // labelSearch_BVV
+            // 
+            this.labelSearch_BVV.AutoSize = true;
+            this.labelSearch_BVV.BackColor = System.Drawing.SystemColors.Control;
+            this.labelSearch_BVV.Location = new System.Drawing.Point(214, 6);
+            this.labelSearch_BVV.Name = "labelSearch_BVV";
+            this.labelSearch_BVV.Size = new System.Drawing.Size(42, 13);
+            this.labelSearch_BVV.TabIndex = 3;
+            this.labelSearch_BVV.Text = "Поиск:";
+            // 
+            // textBoxSearch_BVV
+            // 
+            this.textBoxSearch_BVV.Location = new System.Drawing.Point(262, 3);
+            this.textBoxSearch_BVV.Name = "textBoxSearch_BVV";
+            this.textBoxSearch_BVV.Size = new System.Drawing.Size(206, 20);
+            this.textBoxSearch_BVV.TabIndex = 2;
+            // 
+            // buttonSearch_BVV
+            // 
+            this.buttonSearch_BVV.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSearch_BVV.Location = new System.Drawing.Point(474, 3);
+            this.buttonSearch_BVV.Name = "buttonSearch_BVV";
+            this.buttonSearch_BVV.Size = new System.Drawing.Size(75, 18);
+            this.buttonSearch_BVV.TabIndex = 4;
+            this.buttonSearch_BVV.Text = "Искать";
+            this.toolTipButtons_BVV.SetToolTip(this.buttonSearch_BVV, "Поиск в файле значения из ячейки");
+            this.buttonSearch_BVV.UseVisualStyleBackColor = true;
+            this.buttonSearch_BVV.Click += new System.EventHandler(this.buttonSearch_BVV_Click);
+            this.buttonSearch_BVV.MouseEnter += new System.EventHandler(this.buttonSearch_BVV_MouseEnter);
+            // 
+            // toolTipButtons_BVV
+            // 
+            this.toolTipButtons_BVV.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,6 +207,7 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
         private System.Windows.Forms.Button buttonSearch_BVV;
         private System.Windows.Forms.ToolStripMenuItem открытьБазуДанныхЧитателейToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem статистикаToolStripMenuItem;
+        private System.Windows.Forms.ToolTip toolTipButtons_BVV;
     }
 }
 

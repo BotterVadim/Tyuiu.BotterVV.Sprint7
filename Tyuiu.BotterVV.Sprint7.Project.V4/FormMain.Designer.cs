@@ -44,6 +44,14 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
             this.textBoxSearch_BVV = new System.Windows.Forms.TextBox();
             this.buttonSearch_BVV = new System.Windows.Forms.Button();
             this.toolTipButtons_BVV = new System.Windows.Forms.ToolTip(this.components);
+            this.timerFilter_BVV = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxFilter_BVV = new System.Windows.Forms.TextBox();
+            this.buttonSaveCSVBooks_BVV = new System.Windows.Forms.Button();
+            this.saveFileDialog_BVV = new System.Windows.Forms.SaveFileDialog();
+            this.buttonSaveCSVReaders_BVV = new System.Windows.Forms.Button();
+            this.radioButtonSaveReaders_BVV = new System.Windows.Forms.RadioButton();
+            this.radioButtonSaveBook_BVV = new System.Windows.Forms.RadioButton();
             this.menuStrip_BVV.SuspendLayout();
             this.panelDataBase_BVV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDataBase_BVV)).BeginInit();
@@ -115,11 +123,10 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
             // panelDataBase_BVV
             // 
             this.panelDataBase_BVV.Controls.Add(this.dataGridViewDataBase_BVV);
-            this.panelDataBase_BVV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDataBase_BVV.Enabled = false;
-            this.panelDataBase_BVV.Location = new System.Drawing.Point(0, 24);
+            this.panelDataBase_BVV.Location = new System.Drawing.Point(974, 550);
             this.panelDataBase_BVV.Name = "panelDataBase_BVV";
-            this.panelDataBase_BVV.Size = new System.Drawing.Size(984, 537);
+            this.panelDataBase_BVV.Size = new System.Drawing.Size(10, 11);
             this.panelDataBase_BVV.TabIndex = 1;
             this.panelDataBase_BVV.Visible = false;
             // 
@@ -130,9 +137,8 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
             this.dataGridViewDataBase_BVV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewDataBase_BVV.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewDataBase_BVV.Name = "dataGridViewDataBase_BVV";
-            this.dataGridViewDataBase_BVV.ReadOnly = true;
             this.dataGridViewDataBase_BVV.RowHeadersVisible = false;
-            this.dataGridViewDataBase_BVV.Size = new System.Drawing.Size(984, 537);
+            this.dataGridViewDataBase_BVV.Size = new System.Drawing.Size(10, 11);
             this.dataGridViewDataBase_BVV.TabIndex = 0;
             // 
             // labelSearch_BVV
@@ -141,21 +147,21 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
             this.labelSearch_BVV.BackColor = System.Drawing.SystemColors.Control;
             this.labelSearch_BVV.Location = new System.Drawing.Point(214, 6);
             this.labelSearch_BVV.Name = "labelSearch_BVV";
-            this.labelSearch_BVV.Size = new System.Drawing.Size(42, 13);
+            this.labelSearch_BVV.Size = new System.Drawing.Size(39, 13);
             this.labelSearch_BVV.TabIndex = 3;
-            this.labelSearch_BVV.Text = "Поиск:";
+            this.labelSearch_BVV.Text = "Поиск";
             // 
             // textBoxSearch_BVV
             // 
             this.textBoxSearch_BVV.Location = new System.Drawing.Point(262, 3);
             this.textBoxSearch_BVV.Name = "textBoxSearch_BVV";
-            this.textBoxSearch_BVV.Size = new System.Drawing.Size(206, 20);
+            this.textBoxSearch_BVV.Size = new System.Drawing.Size(120, 20);
             this.textBoxSearch_BVV.TabIndex = 2;
             // 
             // buttonSearch_BVV
             // 
             this.buttonSearch_BVV.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSearch_BVV.Location = new System.Drawing.Point(474, 3);
+            this.buttonSearch_BVV.Location = new System.Drawing.Point(388, 5);
             this.buttonSearch_BVV.Name = "buttonSearch_BVV";
             this.buttonSearch_BVV.Size = new System.Drawing.Size(75, 18);
             this.buttonSearch_BVV.TabIndex = 4;
@@ -169,11 +175,87 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
             // 
             this.toolTipButtons_BVV.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(469, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Фильтр";
+            // 
+            // textBoxFilter_BVV
+            // 
+            this.textBoxFilter_BVV.Location = new System.Drawing.Point(522, 2);
+            this.textBoxFilter_BVV.Name = "textBoxFilter_BVV";
+            this.textBoxFilter_BVV.Size = new System.Drawing.Size(138, 20);
+            this.textBoxFilter_BVV.TabIndex = 6;
+            this.textBoxFilter_BVV.TextChanged += new System.EventHandler(this.textBoxFilter_BVV_TextChanged);
+            // 
+            // buttonSaveCSVBooks_BVV
+            // 
+            this.buttonSaveCSVBooks_BVV.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSaveCSVBooks_BVV.Location = new System.Drawing.Point(883, 2);
+            this.buttonSaveCSVBooks_BVV.Name = "buttonSaveCSVBooks_BVV";
+            this.buttonSaveCSVBooks_BVV.Size = new System.Drawing.Size(89, 21);
+            this.buttonSaveCSVBooks_BVV.TabIndex = 7;
+            this.buttonSaveCSVBooks_BVV.Text = "Сохранить файл";
+            this.toolTipButtons_BVV.SetToolTip(this.buttonSaveCSVBooks_BVV, "Сохранить базу данных читателей...");
+            this.buttonSaveCSVBooks_BVV.UseVisualStyleBackColor = true;
+            this.buttonSaveCSVBooks_BVV.Visible = false;
+            this.buttonSaveCSVBooks_BVV.MouseEnter += new System.EventHandler(this.buttonSaveCSVBooks_BVV_MouseEnter);
+            // 
+            // buttonSaveCSVReaders_BVV
+            // 
+            this.buttonSaveCSVReaders_BVV.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSaveCSVReaders_BVV.Location = new System.Drawing.Point(883, 2);
+            this.buttonSaveCSVReaders_BVV.Name = "buttonSaveCSVReaders_BVV";
+            this.buttonSaveCSVReaders_BVV.Size = new System.Drawing.Size(89, 21);
+            this.buttonSaveCSVReaders_BVV.TabIndex = 8;
+            this.buttonSaveCSVReaders_BVV.Text = "Сохранить файл";
+            this.toolTipButtons_BVV.SetToolTip(this.buttonSaveCSVReaders_BVV, "Сохранить базу данных читателей...");
+            this.buttonSaveCSVReaders_BVV.UseVisualStyleBackColor = true;
+            this.buttonSaveCSVReaders_BVV.Visible = false;
+            this.buttonSaveCSVReaders_BVV.MouseEnter += new System.EventHandler(this.buttonSaveCSVReaders_BVV_MouseEnter);
+            // 
+            // radioButtonSaveReaders_BVV
+            // 
+            this.radioButtonSaveReaders_BVV.AutoSize = true;
+            this.radioButtonSaveReaders_BVV.Enabled = false;
+            this.radioButtonSaveReaders_BVV.Location = new System.Drawing.Point(698, 6);
+            this.radioButtonSaveReaders_BVV.Name = "radioButtonSaveReaders_BVV";
+            this.radioButtonSaveReaders_BVV.Size = new System.Drawing.Size(73, 17);
+            this.radioButtonSaveReaders_BVV.TabIndex = 9;
+            this.radioButtonSaveReaders_BVV.TabStop = true;
+            this.radioButtonSaveReaders_BVV.Text = "Читатели";
+            this.radioButtonSaveReaders_BVV.UseVisualStyleBackColor = true;
+            this.radioButtonSaveReaders_BVV.CheckedChanged += new System.EventHandler(this.radioButtonSaveReaders_BVV_CheckedChanged);
+            // 
+            // radioButtonSaveBook_BVV
+            // 
+            this.radioButtonSaveBook_BVV.AutoSize = true;
+            this.radioButtonSaveBook_BVV.Enabled = false;
+            this.radioButtonSaveBook_BVV.Location = new System.Drawing.Point(792, 6);
+            this.radioButtonSaveBook_BVV.Name = "radioButtonSaveBook_BVV";
+            this.radioButtonSaveBook_BVV.Size = new System.Drawing.Size(55, 17);
+            this.radioButtonSaveBook_BVV.TabIndex = 10;
+            this.radioButtonSaveBook_BVV.TabStop = true;
+            this.radioButtonSaveBook_BVV.Text = "Книги";
+            this.radioButtonSaveBook_BVV.UseVisualStyleBackColor = true;
+            this.radioButtonSaveBook_BVV.CheckedChanged += new System.EventHandler(this.radioButtonSaveBook_BVV_CheckedChanged);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.radioButtonSaveBook_BVV);
+            this.Controls.Add(this.radioButtonSaveReaders_BVV);
+            this.Controls.Add(this.buttonSaveCSVReaders_BVV);
+            this.Controls.Add(this.buttonSaveCSVBooks_BVV);
+            this.Controls.Add(this.textBoxFilter_BVV);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSearch_BVV);
             this.Controls.Add(this.labelSearch_BVV);
             this.Controls.Add(this.textBoxSearch_BVV);
@@ -208,6 +290,14 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
         private System.Windows.Forms.ToolStripMenuItem открытьБазуДанныхЧитателейToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem статистикаToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTipButtons_BVV;
+        private System.Windows.Forms.Timer timerFilter_BVV;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxFilter_BVV;
+        private System.Windows.Forms.Button buttonSaveCSVBooks_BVV;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog_BVV;
+        private System.Windows.Forms.Button buttonSaveCSVReaders_BVV;
+        private System.Windows.Forms.RadioButton radioButtonSaveReaders_BVV;
+        private System.Windows.Forms.RadioButton radioButtonSaveBook_BVV;
     }
 }
 

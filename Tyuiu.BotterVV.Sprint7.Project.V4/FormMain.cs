@@ -30,13 +30,17 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
             databaseopenbooks.Filter = "Значения, разделённые запятыми(*.csv)| *.csv|Все файлы(*.*)|*.*";
             DialogResult resultdatabasebooks = databaseopenbooks.ShowDialog();
             databasebooksopenpath = databaseopenbooks.FileName;
+            radioButtonSaveBook_BVV.Enabled = true;
+            radioButtonSaveBook_BVV.Checked = true;
+            radioButtonSaveReaders_BVV.Enabled = false;
+            radioButtonSaveReaders_BVV.Checked = false;
 
             if (resultdatabasebooks == DialogResult.OK)
             {
+                panelDataBase_BVV.Dock = DockStyle.Fill;
                 dataGridViewDataBase_BVV.DataSource = ds.dataBasebooks(databasebooksopenpath);
                 panelDataBase_BVV.Enabled = true;
                 panelDataBase_BVV.Visible = true;
-
             }
         }
 
@@ -72,8 +76,15 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
             DialogResult resultdatabase = databaseopen.ShowDialog();
             databaseopenpath = databaseopen.FileName;
 
+            dataGridViewDataBase_BVV.DataSource = ds.dataBase(databaseopenpath);
+            radioButtonSaveReaders_BVV.Enabled = true;
+            radioButtonSaveReaders_BVV.Checked = true;
+            radioButtonSaveBook_BVV.Enabled = false;
+            radioButtonSaveBook_BVV.Checked = false;
+
             if (resultdatabase == DialogResult.OK)
             {
+                panelDataBase_BVV.Dock = DockStyle.Fill;
                 dataGridViewDataBase_BVV.DataSource = ds.dataBase(databaseopenpath);
                 panelDataBase_BVV.Enabled = true;
                 panelDataBase_BVV.Visible = true;
@@ -90,6 +101,41 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
         private void buttonSearch_BVV_MouseEnter(object sender, EventArgs e)
         {
             toolTipButtons_BVV.ToolTipTitle = "Поиск по файлу";
+        }
+
+        private void textBoxFilter_BVV_TextChanged(object sender, EventArgs e)
+        {
+            DataView dataView = ds.dataBase(databaseopenpath).DefaultView;
+            dataView.RowFilter = "Название LIKE '" + textBoxFilter_BVV.Text + "%'";
+            dataGridViewDataBase_BVV.DataSource = dataView;
+        }
+
+        private void radioButtonSaveReaders_BVV_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonSaveReaders_BVV.Checked == true)
+            {
+                buttonSaveCSVReaders_BVV.Visible = true;
+                buttonSaveCSVBooks_BVV.Visible = false;
+            }
+        }
+
+        private void radioButtonSaveBook_BVV_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonSaveBook_BVV.Checked == true)
+            {
+                buttonSaveCSVBooks_BVV.Visible = true;
+                buttonSaveCSVReaders_BVV.Visible = false;
+            }
+        }
+
+        private void buttonSaveCSVReaders_BVV_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipButtons_BVV.ToolTipTitle = "Сохранить CSV файл";
+        }
+
+        private void buttonSaveCSVBooks_BVV_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipButtons_BVV.ToolTipTitle = "Сохранить CSV файл";
         }
     }
 }

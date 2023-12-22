@@ -70,9 +70,9 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4.Lib
             DataColumn phonenumber;
             phonenumber = new DataColumn("Телефон читателя", typeof(Int64));
             DataColumn datevidachabook;
-            datevidachabook = new DataColumn("Дата выдачи книги читателю", typeof(Int32));
+            datevidachabook = new DataColumn("Дата выдачи книги читателю", typeof(Decimal));
             DataColumn datesdachabook;
-            datesdachabook = new DataColumn("Дата сдачи книги читателем", typeof(Int32));
+            datesdachabook = new DataColumn("Дата сдачи книги читателем", typeof(Decimal));
 
             database.Columns.AddRange(new DataColumn[] { numberbileta, fiochitatel, address, phonenumber, datevidachabook, datesdachabook });
 

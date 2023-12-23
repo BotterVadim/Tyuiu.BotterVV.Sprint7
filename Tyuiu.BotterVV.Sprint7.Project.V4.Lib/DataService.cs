@@ -130,7 +130,7 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4.Lib
 
         public int MinYearBook(string[,] path)
         {
-            int minyear = 100000000;
+            int minyear = 10000000;
             for (int i = 0; i < path.GetLength(0); i++)
             {
                 if (Convert.ToInt32(path[i, 2]) < minyear)

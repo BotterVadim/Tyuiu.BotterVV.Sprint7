@@ -21,8 +21,8 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
         }
 
         DataService ds = new DataService();
-        string chitpath = @"D:\Обучение\Программирование C#\Спринт 7\Читатели.csv";
-        string bookspath = @"D:\Обучение\Программирование C#\Спринт 7\Книги.csv";
+        string chitpath = @"C:\Users\noph\source\repos\Tyuiu.BotterVV.Sprint7\Tyuiu.BotterVV.Sprint7.Project.V4\bin\Debug\Читатели.csv";
+        string bookspath = @"C:\Users\noph\source\repos\Tyuiu.BotterVV.Sprint7\Tyuiu.BotterVV.Sprint7.Project.V4\bin\Debug\Книги.csv";
 
         public static string[,] LoadFromFileData(string path)
         {

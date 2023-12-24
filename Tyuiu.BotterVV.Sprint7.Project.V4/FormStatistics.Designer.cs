@@ -29,6 +29,7 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStatistics));
             this.buttonStatisticClose_BVV = new System.Windows.Forms.Button();
             this.textBoxMaxPrice_BVV = new System.Windows.Forms.TextBox();
             this.labelMaxPrice_BVV = new System.Windows.Forms.Label();
@@ -206,6 +207,7 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
             this.Controls.Add(this.buttonStatisticClose_BVV);
             this.Enabled = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormStatistics";

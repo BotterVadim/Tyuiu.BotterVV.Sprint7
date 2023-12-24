@@ -29,8 +29,11 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAbout));
             this.labelAbout_BVV = new System.Windows.Forms.Label();
             this.buttonAbout_BVV = new System.Windows.Forms.Button();
+            this.pictureBoxDevelomeow_BVV = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDevelomeow_BVV)).BeginInit();
             this.SuspendLayout();
             // 
             // labelAbout_BVV
@@ -54,19 +57,32 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
             this.buttonAbout_BVV.UseVisualStyleBackColor = true;
             this.buttonAbout_BVV.Click += new System.EventHandler(this.buttonAbout_BVV_Click);
             // 
+            // pictureBoxDevelomeow_BVV
+            // 
+            this.pictureBoxDevelomeow_BVV.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDevelomeow_BVV.Image")));
+            this.pictureBoxDevelomeow_BVV.Location = new System.Drawing.Point(279, 12);
+            this.pictureBoxDevelomeow_BVV.Name = "pictureBoxDevelomeow_BVV";
+            this.pictureBoxDevelomeow_BVV.Size = new System.Drawing.Size(193, 180);
+            this.pictureBoxDevelomeow_BVV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxDevelomeow_BVV.TabIndex = 2;
+            this.pictureBoxDevelomeow_BVV.TabStop = false;
+            // 
             // FormAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 261);
+            this.Controls.Add(this.pictureBoxDevelomeow_BVV);
             this.Controls.Add(this.buttonAbout_BVV);
             this.Controls.Add(this.labelAbout_BVV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormAbout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "О программе";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDevelomeow_BVV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -76,5 +92,6 @@ namespace Tyuiu.BotterVV.Sprint7.Project.V4
 
         private System.Windows.Forms.Label labelAbout_BVV;
         private System.Windows.Forms.Button buttonAbout_BVV;
+        private System.Windows.Forms.PictureBox pictureBoxDevelomeow_BVV;
     }
 }
